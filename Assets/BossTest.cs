@@ -28,7 +28,7 @@ public class Boss{
 	//魔法攻撃用の関数
 		public void Magic(){
 
-		if (this.mp > magic) {
+		if (this.mp >= magic) {
 			this.mp -= magic;
 			Debug.Log ("魔法攻撃をした。残りMPは" + mp);
 		}

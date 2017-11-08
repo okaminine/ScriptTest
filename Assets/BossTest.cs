@@ -28,24 +28,32 @@ public class Boss{
 	//魔法攻撃用の関数
 		public void Magic(){
 
-		if (this.mp <= magic)
-			// (53-magic×回数)がmagic5より少なくなったときtrue
-			Debug.Log ("MPが足りないので魔法攻撃できない。");
-		else {
-			this.mp -= magic;	
-			// mp = mp-magic
+		if (this.mp > magic) {
+			this.mp -= magic;
 			Debug.Log ("魔法攻撃をした。残りMPは" + mp);
+		}
 
-			if (this.mp <= magic)
+		if (this.mp < magic){
+			Debug.Log ("MPが足りないので魔法攻撃できない。");
+		}
+
+		//if (this.mp <= magic)
+			// (53-magic×回数)がmagic5より少なくなったときtrue
+		//	Debug.Log ("MPが足りないので魔法攻撃できない。");
+		//else {
+		//	this.mp -= magic;	
+			// mp = mp-magic
+		//	Debug.Log ("魔法攻撃をした。残りMPは" + mp);
+
+		//	if (this.mp <= magic)
 				//mpがmagicより少ないときtrue
-				Debug.Log ("MPが足りないので魔法攻撃できない。");
+		//		Debug.Log ("MPが足りないので魔法攻撃できない。");
 		}
 
 
 	}
 
-			
-}
+		
 		
 
 public class BossTest : MonoBehaviour {
